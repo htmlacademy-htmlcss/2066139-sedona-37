@@ -1,0 +1,359 @@
+@font-face {
+  font-family: "PT Sans";
+  font-style: normal;
+  font-weight: 400;
+  src: url("../fonts/ptsans-400.woff2") format("woff2");
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "PT Sans";
+  font-style: normal;
+  font-weight: 700;
+  src: url("../fonts/ptsans-700.woff2") format("woff2");
+  font-display: swap;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  font-family: "PT Sans", "Arial", sans-serif;
+  font-style: normal;
+  font-size: 18px;
+  line-height: 28px;
+  font-weight: 400;
+}
+
+.btn{
+  font-family: inherit;
+  font-weight: 700;
+  text-align: center;
+  text-transform: uppercase;
+  text-decoration: none;
+  color: #fff;
+  background-color: #756157;
+  border-radius: 4px;
+}
+
+/* PAGE-HEADER */
+
+.navigation-item{
+  font-size: 20px;
+  line-height: 24px;
+  font-weight: 700;
+  list-style: none;
+}
+
+.navigation-link{
+  color: #000;
+  text-decoration: none;
+}
+
+.btn-header-link{
+  width: 160px;
+  height: 36px;
+  padding: 8px 34px;
+  font-size: 16px;
+  line-height: 20px;
+}
+
+/* MAIN-INDEX */
+.promo-hero{
+  width: 100%;
+  height: 485px;
+  background:
+    url("../images/background/divider-bg.svg") no-repeat center bottom,
+    #000 url("../images/background/hero-bg.jpg") no-repeat center;
+  background-size: contain, cover;
+}
+
+.welcome-logo{
+  display: block;
+  margin: 0 auto;
+  padding-top: 51px;
+}
+
+.title-page{
+  font-size: 30px;
+  line-height: 36px;
+  text-align: center;
+  text-transform: uppercase;
+  color: #000;
+}
+
+.description-page{
+  font-size: 22px;
+  line-height: 26px;
+  text-align: center;
+  color: #333333;
+}
+
+/* advantages block */
+.advantages-list .title, .services-list .title{
+  font-size: 24px;
+  line-height: 28px;
+  text-transform: uppercase;
+}
+
+.advantages-item{
+  list-style: none;
+  text-align: center;
+  color: #000;
+  background-color: #f0f6fa;
+}
+
+.advantages-item:nth-child(4n+1){
+  color: #fff;
+  background-color: #82b3d3;
+}
+
+.advantages-item:nth-child(3){
+  background-color: #e6f0f6;
+}
+
+.advantages-description{
+  font-size: 18px;
+  line-height: 21px;
+  color: #333;
+}
+
+/* services block */
+.services-item{
+  list-style: none;
+  text-align: center;
+}
+
+.services-item:nth-child(odd){
+  background-color: #f0f6fa;
+}
+
+.services-description{
+  font-size: 18px;
+  line-height: 21px;
+  color: #333;
+}
+
+/* hotel-search block */
+.hotel-search-btn-link{
+  width: 276px;
+  height: 36px;
+  padding: 8px 50px;
+  font-size: 20px;
+  line-height: 36px;
+}
+
+/* MAIN-INNER */
+/* inner-header block*/
+.sedona-hotels-filter{
+  width: 100%;
+  color: #fff;
+  background: #000 url("../images/background/filter-bg.jpg") no-repeat center;
+  background-size: cover;
+}
+
+.inner-header-title{
+  font-size: 60px;
+  line-height: 78px;
+  font-weight: 700;
+}
+
+.breadcrumbs-item{
+  font-size: 16px;
+  line-height: 21px;
+  list-style: none;
+}
+
+/* hotels-filter block */
+.hotels-filter-title{
+  font-size: 20px;
+  line-height: 24px;
+  font-weight: 700;
+}
+
+.hotels-filter-item{
+  font-size: 18px;
+  line-height: 23px;
+  list-style: none;
+}
+
+.btn-apply-hotels-filter{
+  width: 191px;
+  padding: 8px 50px;
+  font-size: 16px;
+  line-height: 20px;
+  font-weight: 700;
+  background-color: #82b3d3;
+  border: none;
+}
+
+.btn-reset-hotels-filter{
+  width: 191px;
+  padding: 8px 50px;
+  font-size: 16px;
+  line-height: 20px;
+  font-weight: 700;
+  background-color: transparent;
+  border: none;
+}
+
+/* catalog-hotels block*/
+.catalog-hotels-title{
+  font-size: 30px;
+  line-height: 36px;
+  font-weight: 700;
+  text-transform: uppercase;
+}
+
+.select-control{
+  font-family: inherit;
+  font-size: 18px;
+  line-height: 21px;
+  color: #333;
+}
+
+.catalog-hotels-card{
+  list-style: none;
+}
+
+.hotel-card-link{
+  text-decoration: none;
+  color: #000;
+}
+
+.hotel-card-title{
+  font-size: 24px;
+  line-height: 28px;
+  font-weight: 700;
+}
+
+.hotel-text{
+  line-height: 21px;
+  color: #333;
+}
+
+.btn-card{
+  font-family: inherit;
+  font-size: 16px;
+  line-height: 20px;
+  font-weight: 700;
+  text-align: center;
+  text-transform: uppercase;
+  color: #fff;
+  border-radius: 4px;
+}
+
+.btn-more{
+  padding: 8px 26px;
+  background-color: #756157;
+}
+
+.btn-favorites{
+  padding: 8px 20px;
+  background-color: #82b3d3;
+  border: none;
+}
+
+.btn-favorites-selected{
+  background-color: #7db54f;
+}
+
+.hotel-rating{
+  padding: 8px 22px;
+  font-size: 16px;
+  line-height: 20px;
+  text-transform: uppercase;
+  color: #333;
+  background-color: #f2f2f2;
+  border-radius: 4px;
+}
+
+/* catalog-pagination block */
+.catalog-pagination-item{
+  width: 60px;
+  height: 60px;
+  font-size: 20px;
+  line-height: 36px;
+  font-weight: 700;
+  text-align: center;
+  list-style: none;
+  background-color: #82b3d3;
+}
+
+.item-current{
+  background-color: #f2f2f2;
+}
+
+.item-expand{
+  background-color: #fff;;
+}
+
+.pagination-link{
+  vertical-align: middle;
+  text-decoration: none;
+  color: #fff;
+}
+
+.pagination-current{
+  color: #000;
+}
+
+.pagination-link-expand{
+  font-size: 22px;
+  line-height: 26px;
+  font-weight: 400;
+  color: #000;
+}
+
+
+/* PAGE-FOOTER */
+.newsletter{
+  width: 100%;
+  height: 415px;
+  text-align: center;
+}
+
+.newsletter-home{
+  color: #fff;
+  background: #000 url("../images/background/subscribe-bg.jpg") no-repeat center;
+  background-size: cover;
+}
+
+.newsletter-home .newsletter-title,
+.newsletter-home .newsletter-description{
+  color: #fff;
+}
+
+.field-subscribe{
+  width: 452px;
+  height: 52px;
+  font-family: inherit;
+  font-size: 18px;
+  line-height: 24px;
+  background-color: #f2f2f2;
+  border: none;
+  border-radius: 4px 0 0 4px;
+}
+
+.newsletter-btn{
+  width: 232px;
+  height: 52px;
+  padding: 8px 50px;
+  font-size: 20px;
+  line-height: 36px;
+  background-color: #82b3d3;
+  border: none;
+  border-radius: 0 4px 4px 0;
+}
+
+.contacts-social-item{
+  list-style: none;
+}
+
+.contacts-phone{
+  font-size: 40px;
+  line-height: 40px;
+  text-align: center;
+  text-transform: uppercase;
+  text-decoration: none;
+  color: #000;
+}
