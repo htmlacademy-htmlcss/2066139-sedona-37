@@ -123,37 +123,41 @@
               <label class="visually-hidden" for="value-range">Ползунок диапозона стоимости</label>
               <input class="filter-range" type="range" min="0" max="9000" value="5000" id="value-range">
             </fieldset>
-            <button class="btn btn-apply-hotels-filter" type="submit">Применить</button>
-            <button class="btn btn-reset-hotels-filter" type="reset">Сбросить</button>
+            <div class="btn-filter-wrapper">
+              <button class="btn btn-apply-hotels-filter" type="submit">Применить</button>
+              <button class="btn btn-reset-hotels-filter" type="reset">Сбросить</button>
+            </div>
           </form>
         </section>
         <section class="catalog-hotels">
           <h2 class="visually-hidden">Каталог со списком гостиниц</h2>
           <section class="catalog-hotels-sorting">
             <h3 class="visually-hidden">Сортировка гостиниц</h3>
-            <p class="catalog-hotels-title">Найдено гостиниц: 38</p>
-            <select class="select-control" aria-label="Сортировка гостиниц">
-              <option value="cheap">Сначала дешевые</option>
-              <option value="popular">Сначала популярные</option>
-              <option value="expensive">Сначала дорогие</option>
-            </select>
-            <ul class="view-card-list">
-              <li class="view-card-item">
-                <a class="btn-display-hotels-table" href="#">
-                  <span class="visually-hidden">Показать карточки</span>
-                </a>
-              </li>
-              <li class="view-card-item">
-                <a class="btn-display-hotels-slideshow" href="#">
-                  <span class="visually-hidden">Показать Слайд-шоу</span>
-                </a>
-              </li>
-              <li class="view-card-item">
-                <a class="btn-display-hotels-list" href="#">
-                  <span class="visually-hidden">Показать список</span>
-                </a>
-              </li>
-            </ul>
+            <div class="sorting-container">
+              <p class="catalog-hotels-title">Найдено гостиниц: 38</p>
+              <select class="select-control" aria-label="Сортировка гостиниц">
+                <option value="cheap">Сначала дешевые</option>
+                <option value="popular">Сначала популярные</option>
+                <option value="expensive">Сначала дорогие</option>
+              </select>
+              <ul class="view-card-list">
+                <li class="view-card-item view-card-item-active">
+                  <a class="btn-display-hotels-table" href="#">
+                    <span class="visually-hidden">Показать карточки</span>
+                  </a>
+                </li>
+                <li class="view-card-item">
+                  <a class="btn-display-hotels-slideshow" href="#">
+                    <span class="visually-hidden">Показать Слайд-шоу</span>
+                  </a>
+                </li>
+                <li class="view-card-item">
+                  <a class="btn-display-hotels-list" href="#">
+                    <span class="visually-hidden">Показать список</span>
+                  </a>
+                </li>
+              </ul>
+            </div>
           </section>
           <ul class="catalog-hotels-list">
             <li class="catalog-hotels-card">
@@ -161,8 +165,8 @@
                 <img class="hotel-card-img" src="images/catalog/hotel-1.jpg" width="300" height="212" alt="">
                 <h3 class="hotel-card-title">Amara Resort & Spa</h3>
               </a>
-              <span class="hotel-text">От 4000 ₽</span>
               <span class="hotel-text">Гостиница</span>
+              <span class="hotel-text">От 4000 ₽</span>
               <a class="btn-card btn-more">Подробнее</a>
               <button class="btn-card btn-favorites" type="button">В избранное</button>
               <p class="stars stars-four">
@@ -217,7 +221,7 @@
             <h3 class="visually-hidden">Пагинация гостиниц</h3>
             <ul class="catalog-pagination-list">
               <li class="catalog-pagination-item item-current">
-                <a class="pagination-link pagination-current" href="#">1</a>
+                <a class="pagination-link pagination-link-current" href="#">1</a>
               </li>
               <li class="catalog-pagination-item">
                 <a class="pagination-link" href="#">2</a>
@@ -285,7 +289,9 @@
                 </a>
               </li>
             </ul>
-            <a class="contacts-phone" href="tel:+78128121212">+7 (812) 812-12-12</a>
+            <div class="phone-wrapper">
+              <a class="contacts-phone" href="tel:+78128121212">+7 (812) 812-12-12</a>
+            </div>
             <a class="contacts-logo-htmlacademy" href="https://htmlacademy.ru/">
               <svg xmlns="http://www.w3.org/2000/svg" width="115" height="34" fill="none" role="img" aria-label="Логотип академии">
                 <path fill="#000"
