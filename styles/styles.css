@@ -533,16 +533,19 @@ body {
 .hotel-card-content{
   display: grid;
   grid-template-columns: repeat(2, calc(50% - 10px));
+  align-items: end;
   gap: 16px 20px;
 }
 
 .hotel-card-type{
+  grid-column: 1/2;
   word-break: break-word;
   line-height: 21px;
   color: #333333;
 }
 
 .hotel-card-price{
+  grid-column: 2/3;
   justify-self: end;
   line-height: 21px;
   color: #333333;
