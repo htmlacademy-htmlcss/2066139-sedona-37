@@ -79,7 +79,6 @@ body {
 .navigation-list{
   display: flex;
   flex-wrap: wrap;
-  align-items: center;
   max-width: 450px;
   margin: 0;
   margin-left: 168px;
@@ -107,6 +106,7 @@ body {
 
 .navigation-user .navigation-item:last-child{
   margin-left: 20px;
+  padding: 14px 0;
 }
 
 .navigation-user .navigation-link{
@@ -118,9 +118,6 @@ body {
 
 .number-of-favorites{
   display: block;
-  box-sizing: border-box;
-  width: 20px;
-  height: 20px;
   padding: 5px;
   padding-left: 4px;
   font-size: 10px;
@@ -446,7 +443,7 @@ body {
 
 .sorting-container{
   display: flex;
-  align-items: center;
+  align-items: flex-start;
 }
 
 .catalog-hotels-title{
@@ -508,7 +505,7 @@ body {
   flex-direction: column;
   padding: 20px;
   border-radius: 4px;
-  box-shadow: 0 0 0 1px #e6e6e6;
+  outline: 1px solid #e6e6e6;
 }
 
 .hotel-card-link{
@@ -697,6 +694,7 @@ body {
 .contacts-container{
   display: flex;
   justify-content: space-between;
+  align-items: flex-start;
 }
 
 .contacts-social-list{
@@ -734,5 +732,4 @@ body {
 
 .contacts-logo-htmlacademy{
   display: flex;
-  align-items: center;
 }
