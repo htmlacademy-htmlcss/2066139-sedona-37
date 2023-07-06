@@ -32,13 +32,19 @@
           </ul>
           <ul class="navigation-list navigation-user">
             <li class="navigation-item navigation-item-user">
-              <a class="navigation-link" href="#">
+              <a class="navigation-link navigation-search" href="#">
                 <span class="visually-hidden">Поиск</span>
+                <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" fill="#000" viewBox="0 0 18 18" aria-hidden="true" focusable="false">
+                  <path d="m18.893 17.008-3.7-3.68c1-1.292 1.7-2.983 1.7-4.872 0-4.376-3.6-7.956-8-7.956s-8 3.68-8 8.055c0 4.376 3.6 7.956 8 7.956 1.8 0 3.5-.597 4.9-1.69l3.7 3.679 1.4-1.492Zm-10-2.486c-3.3 0-6-2.685-6-5.967 0-3.282 2.7-5.967 6-5.967s6 2.685 6 5.967c0 3.282-2.7 5.967-6 5.967Z"/>
+                </svg>
               </a>
             </li>
             <li class="navigation-item navigation-item-user">
-              <a class="navigation-link" href="#">
+              <a class="navigation-link navigation-favorites" href="#">
                 <span class="visually-hidden">Избранное</span>
+                <svg xmlns="http://www.w3.org/2000/svg" width="18" height="17" fill="#000" viewBox="0 0 18 17" aria-hidden="true" focusable="false">
+                  <path d="M8.9 17c-.3 0-.6-.1-.8-.4-5.4-6.1-6.7-7.5-7-7.9C.4 7.8 0 6.6 0 5.4 0 2.4 2.4 0 5.5 0 6.8 0 8 .5 9 1.3 10 .5 11.3 0 12.5 0c3 0 5.5 2.4 5.5 5.4 0 1.3-.5 2.5-1.3 3.4l-7 7.9c-.2.2-.4.3-.8.3Zm-6-9.5c.3.4 3.5 4 6.1 6.9l6.2-7c.5-.5.7-1.2.7-2 0-1.8-1.5-3.3-3.3-3.3-1 0-2 .5-2.7 1.3-.3.3-.6.4-.9.4-.3 0-.6-.2-.8-.4-.7-.8-1.7-1.3-2.7-1.3-1.8 0-3.3 1.5-3.3 3.3-.1.9.3 1.6.7 2.1-.1 0-.1 0 0 0Z"/>
+                </svg>
                 <span class="number-of-favorites">12</span>
               </a>
             </li>
@@ -72,19 +78,19 @@
                 <li class="hotels-filter-item">
                   <label class="control">
                     <input class="control-input" type="checkbox" name="pool" checked>
-                    <span class="control-label">Бассейн</span>
+                    Бассейн
                   </label>
                 </li>
                 <li class="hotels-filter-item">
                   <label class="control">
                     <input class="control-input" type="checkbox" name="parking" checked>
-                    <span class="control-label">Парковка</span>
+                    Парковка
                   </label>
                 </li>
                 <li class="hotels-filter-item">
                   <label class="control">
                     <input class="control-input" type="checkbox" name="wi-fi">
-                    <span class="control-label">Wi-Fi</span>
+                    Wi-Fi
                   </label>
                 </li>
               </ul>
@@ -95,19 +101,19 @@
                 <li class="hotels-filter-item">
                   <label class="control">
                     <input class="control-input" type="radio" name="type-of-housing" value="hotel" checked>
-                    <span class="control-label">Гостиница</span>
+                    Гостиница
                   </label>
                 </li>
                 <li class="hotels-filter-item">
                   <label class="control">
                     <input class="control-input" type="radio" name="type-of-housing" value="motel">
-                    <span class="control-label">Мотель</span>
+                    Мотель
                   </label>
                 </li>
                 <li class="hotels-filter-item">
                   <label class="control">
                     <input class="control-input" type="radio" name="type-of-housing" value="apartments">
-                    <span class="control-label">Апартаменты</span>
+                    Апартаменты
                   </label>
                 </li>
               </ul>
@@ -126,10 +132,10 @@
               </div>
               <div class="range-slider-scale">
                 <div class="range-slider-bar">
-                  <button class="range-btn range-btn-min">
+                  <button class="range-btn range-btn-min" type="button">
                     <span class="visually-hidden">Изменить минимальную стоимость.</span>
                   </button>
-                  <button class="range-btn range-btn-max">
+                  <button class="range-btn range-btn-max" type="button">
                     <span class="visually-hidden">Изменить максимальную стоимость.</span>
                   </button>
                 </div>
