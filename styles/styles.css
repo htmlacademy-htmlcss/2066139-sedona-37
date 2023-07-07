@@ -734,8 +734,6 @@ body {
 
 .range-slider-bar{
   position: absolute;
-  left: 0;
-  right: 60px;
   height: 4px;
   background-color: #ffffff;
 }
