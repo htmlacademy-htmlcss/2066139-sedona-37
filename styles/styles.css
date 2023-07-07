@@ -682,6 +682,7 @@ body {
   box-sizing: border-box;
   max-width: 143px;
   padding: 12px 20px;
+  padding-right: 40px;
   font-family: inherit;
   font-size: 18px;
   line-height: 24px;
@@ -844,6 +845,7 @@ body {
   min-width: 292px;
   margin-right: 70px;
   padding: 12px 20px;
+  padding-right: 40px;
   font-family: inherit;
   font-size: 18px;
   line-height: 21px;
