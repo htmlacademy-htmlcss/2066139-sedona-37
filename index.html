@@ -123,7 +123,7 @@
           <h2 class="visually-hidden">Поиск гостиницы</h2>
           <p class="hotel-search-title title-page">Заинтересовались?</p>
           <p class="hotel-search-description description-page">Укажите предполагаемые даты поездки,<br>и мы покажем вам лучшие предложения гостиниц в Седоне</p>
-          <a class="btn hotel-search-btn-link btn-brown" href="#">Поиск гостиницы в Седоне</a>
+          <a class="btn hotel-search-btn-link btn-brown open-modal" href="#">Поиск гостиницы в Седоне</a>
         </section>
       </main>
 
@@ -182,7 +182,75 @@
         </section>
       </footer>
 
+      <dialog class="hotel-search-popup">
+        <section class="modal-content">
+          <h2 class="modal-title title-page">Поиск гостиницы в Седоне</h2>
+          <form class="modal-search-form" action="https://echo.htmlacademy.ru/" method="post">
+            <div class="form-date-wrapper">
+              <label class="form-label date-label">
+                <span class="date-text">Дата заезда:</span>
+                <input class="input-box field-date" type="text" name="arrival-date" value="27 апреля 2020" placeholder="Укажите дату" required>
+              </label>
+              <p class="message-info message-error">Мы не можем отправить вас в прошлое.</p>
+            </div>
+            <div class="form-date-wrapper">
+              <label class="form-label date-label">
+                <span class="date-text">Дата выезда:</span>
+                <input class="input-box field-date" type="text" name="departure-date" value="1 сентября 2023" placeholder="Укажите дату" required>
+              </label>
+              <p class="message-info message-approval">На эти даты есть свободные номера. Пока есть.</p>
+            </div>
+            <label class="form-label adults-label" for="person-adults-count">Взрослые:</label>
+            <p class="modal-count count-adults">
+              <button class="input-box decrement-count" type="button">
+                <span class="visually-hidden">Уменьшить количество взрослых на единицу.</span>
+                <svg class="minus-icon" xmlns="http://www.w3.org/2000/svg" width="14" height="2" viewBox="0 0 14 2" fill="currentColor" aria-hidden="true" focusable="false">
+                  <path d="M0 0L0 2L14 2V0L0 0Z"/>
+                </svg>
+              </button>
+              <input class="input-box person-adults field-number" type="number" name="person-adults-count" id="person-adults-count" value="2" placeholder="2" min="1" max="20" required>
+              <button class="input-box increment-count" type="button">
+                <span class="visually-hidden">Увеличить количество взрослых на единицу.</span>
+                <svg class="plus-icon" xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 14 14" fill="currentColor" aria-hidden="true" focusable="false">
+                  <path d="M14 6H8V0H6v6H0v2h6v6h2V8h6V6Z"/>
+                </svg>
+              </button>
+            </p>
+            <span class="form-label form-label-icon">
+              <label class="form-label children-label" for="person-children-count">Дети:</label>
+              <span class="tooltip">
+                <button class="tooltip-toggle" type="button" aria-labelledby="tooltip-label-info-children"></button>
+                <span class="tooltip-text" role="tooltip" id="tooltip-label-info-children">Укажите количество детей, которые будут с вами, возраст которых от 6 до 18 лет. Дети до 6 лет размещаются бесплатно.</span>
+              </span>
+            </span>
+            <p class="modal-count count-children">
+              <button class="input-box decrement-count" type="button">
+                <span class="visually-hidden">Уменьшить количество детей на единицу.</span>
+                <svg class="minus-icon" xmlns="http://www.w3.org/2000/svg" width="14" height="2" viewBox="0 0 14 2" fill="currentColor" aria-hidden="true" focusable="false">
+                  <path d="M0 0L0 2L14 2V0L0 0Z"/>
+                </svg>
+              </button>
+              <input class="input-box person-children field-number" type="number" name="person-children-count" id="person-children-count" value="2" placeholder="2" min="0" max="20" required>
+              <button class="input-box increment-count" type="button">
+                <span class="visually-hidden">Увеличить количество детей на единицу.</span>
+                <svg class="plus-icon" xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 14 14" fill="currentColor" aria-hidden="true" focusable="false">
+                  <path d="M14 6H8V0H6v6H0v2h6v6h2V8h6V6Z"/>
+                </svg>
+              </button>
+            </p>
+            <button class="btn hotel-search-btn btn-blue" type="submit">Найти</button>
+          </form>
+        </section>
+        <button class="modal-close-btn" type="button">
+          <span class="visually-hidden">Закрыть модальное окно.</span>
+          <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" fill="currentColor" aria-hidden="true" focusable="false">
+            <path d="M14.49 1.783 13.199.49 7.49 6.198 1.783.491.49 1.783 6.198 7.49.49 13.198l1.293 1.293L7.49 8.783l5.708 5.708 1.293-1.293-5.708-5.707 5.708-5.708Z"/>
+          </svg>
+        </button>
+      </dialog>
+
     </div>
+    <script src="scripts/script.js" defer></script>
   </body>
 
 </html>

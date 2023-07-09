@@ -693,16 +693,16 @@ body {
 }
 
 /* remove the arrows from the input */
-.price-range-field::-webkit-outer-spin-button,
-.price-range-field::-webkit-inner-spin-button {
-    -webkit-appearance: none;
+.field-number::-webkit-outer-spin-button,
+.field-number::-webkit-inner-spin-button{
+  -webkit-appearance: none;
 }
 
-.price-range-field,
-.price-range-field:hover,
-.price-range-field:focus {
-    appearance: none;
-    -moz-appearance: textfield;
+.field-number,
+.field-number:hover,
+.field-number:focus{
+  appearance: none;
+  -moz-appearance: textfield;
 }
 
 .price-range-field:hover{
@@ -854,6 +854,8 @@ body {
   border-radius: 4px;
   background: url("../images/icons/arrow-down.svg") no-repeat right 20px center;
   cursor: pointer;
+  -webkit-appearance: none;
+  -moz-appearance: none;
   appearance: none;
 }
 
@@ -1299,4 +1301,319 @@ body {
 .contacts-logo-htmlacademy{
   padding: 4px 0 0 0;
   color: #000000;
+}
+
+/* MODAL-FORM-SEARCH-HOTEL */
+.hotel-search-popup::backdrop{
+  background-color: rgba(242, 242, 242, 0.8);
+}
+
+.hotel-search-popup{
+  position: relative;
+  box-sizing: border-box;
+  max-width: 717px;
+  padding: 64px 70px;
+  border: none;
+  border-radius: 30px;
+  background-color: #ffffff;
+  box-shadow: 0 25px 50px rgba(0, 0, 0, 0.15);
+}
+
+.modal-title{
+  max-width: 440px;
+  margin-bottom: 64px;
+  text-align: start;
+}
+
+.modal-search-form{
+  display: grid;
+  grid-template-columns: 137px 110px 219px 110px;
+  row-gap: 48px;
+}
+
+.form-date-wrapper{
+  grid-column: 1/-1;
+  position: relative;
+}
+
+.message-info{
+  position: absolute;
+  top: 52px;
+  left: 137px;
+  max-width: 440px;
+  margin: 0;
+  padding: 0 20px;;
+  font-family: inherit;
+  font-size: 16px;
+  line-height: 21px;
+  color: #333333;
+}
+
+.message-error{
+  color: #ff5757;
+}
+
+.adults-label{
+  grid-column: 1/2;
+  padding: 12px 0;
+}
+
+.count-children{
+  grid-column: 4/5;
+}
+
+.hotel-search-btn{
+  grid-column: 1/-1;
+}
+
+.form-label{
+  font-family: inherit;
+  font-size: 20px;
+  font-weight: 700;
+  line-height: 24px;
+}
+
+.date-label{
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+}
+
+.date-text{
+  max-width: 137px;
+  padding: 12px 0;
+  text-transform: capitalize;
+}
+
+.input-box{
+  box-sizing: border-box;
+  font-family: inherit;
+  font-size: 18px;
+  font-weight: 700;
+  line-height: 24px;
+  border: none;
+  background-color: #f2f2f2;
+}
+
+.field-date{
+  width: 440px;
+  padding: 12px 40px 12px 20px;
+  background: #f2f2f2 url("../images/icons/icon-date.svg") no-repeat right 19px center;
+  border-radius: 4px;
+}
+
+.field-date:hover{
+  background-color: #e6e6e6;
+}
+
+.field-date:not(:placeholder-shown):hover{
+  background-color: #f2f2f2;
+  outline: 2px solid #000000;
+}
+
+.field-date:focus-visible{
+  background-color: #e6e6e6;
+  color: rgba(0, 0, 0, 0.6);
+  outline: 3px solid #83b3d3;
+}
+
+@supports not selector(:focus-visible){
+  .field-date:focus{
+    background-color: #e6e6e6;
+    color: rgba(0, 0, 0, 0.6);
+    outline: 3px solid #83b3d3;
+  }
+}
+
+.modal-count{
+  display: flex;
+  max-width: 110px;
+  height: 48px;
+  margin: 0;
+}
+
+.decrement-count, .increment-count{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 40px;
+  color: rgba(117, 97, 87, 0.3);
+  cursor: pointer;
+}
+
+.input-box[type="button"]:focus{
+  outline: none;
+}
+
+.decrement-count{
+  border-radius: 4px 0 0 4px;
+}
+
+.increment-count{
+  border-radius: 0 4px 4px 0;
+}
+
+.minus-icon{
+  padding: 9px 3px;
+}
+.plus-icon{
+  padding: 3px;
+}
+
+.decrement-count:hover,
+.increment-count:hover{
+  color: #000000;
+  border: none;
+}
+
+
+.decrement-count:focus-visible .minus-icon,
+.increment-count:focus-visible .plus-icon{
+  color: #000000;
+  border: 3px solid #82b3d3;
+  border-radius: 8px;
+}
+
+@supports not selector(:focus-visible){
+  .decrement-count:focus .minus-icon,
+  .increment-count:focus .plus-icon{
+    color: #000000;
+    border: 3px solid #82b3d3;
+    border-radius: 8px;
+  }
+}
+
+.decrement-count:active .minus-icon,
+.increment-count:active .plus-icon{
+  color: rgba(0, 0, 0, 0.2);
+}
+
+.person-adults, .person-children{
+  width: 31px;
+  text-align: center;
+  line-height: 20px;
+}
+
+.form-label-icon{
+  position: relative;
+  justify-self: flex-end;
+  padding: 11px 0;
+  padding-right: 83px;
+}
+
+.tooltip {
+  position: absolute;
+  width: 20px;
+  height: 20px;
+  margin-top: 0;
+  margin-left: 10px;
+}
+
+.tooltip:hover {
+  padding-right: 0;
+  padding-bottom: 25px;
+}
+
+.tooltip-toggle{
+  display: block;
+  width: 26px;
+  height: 26px;
+  padding: 0;
+  border: none;
+  border-radius: 50%;
+  background: #83b3d3 url("../images/icons/tooltip.svg") no-repeat center;
+  cursor: pointer;
+}
+
+.tooltip:hover .tooltip-text,
+.tooltip-toggle:focus + .tooltip-text{
+  display: block;
+}
+
+.tooltip-text{
+  position: absolute;
+  top: 40px;
+  left: 70%;
+  display: none;
+  box-sizing: border-box;
+  width: 256px;
+  padding: 20px 18px 23px 22px;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 20px;
+  color: #ffffff;
+  border-radius: 10px;
+  background-color: #333333;
+  box-shadow: 0 15px 30px 0 rgba(0, 0, 0, 0.30);
+  transform: translateX(-50%);
+  z-index: 1;
+}
+
+.tooltip-text:before {
+  content:'';
+  position:absolute;
+  bottom: 100%;
+  left:0;
+  right:0;
+  width: 0;
+  height: 0;
+  margin-left: auto;
+  margin-right: auto;
+  border-left: 9px solid transparent;
+  border-right: 9px solid transparent;
+  border-bottom: 9px solid #333333;
+}
+
+.hotel-search-btn{
+  padding: 18px 0;
+  font-size: 20px;
+  line-height: 24px;
+  text-align: center;
+  border: none;
+  border-radius: 10px;
+  background-color: #83b3d3;
+  cursor: pointer;
+}
+
+.hotel-search-btn.btn-blue:active{
+  background-color: #68a2ca;
+}
+
+.modal-close-btn{
+  position: absolute;
+  top: 64px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  right: 52px;
+  width: 52px;
+  padding: 0;
+  height: 52px;
+  border: none;
+  border-radius: 50%;
+  background-color: #f2f2f2;
+  cursor: pointer;
+}
+
+.modal-close-btn:hover{
+  background-color: #e6e6e6;
+}
+
+.modal-close-btn:focus-visible{
+  border: none;
+  background-color: #e6e6e6;
+  outline: 3px solid #83b3d3;
+}
+
+@supports not selector(:focus-visible){
+  .modal-close-btn:focus{
+    border: none;
+    background-color: #e6e6e6;
+    outline: 3px solid #83b3d3;
+  }
+}
+
+.modal-close-btn:active{
+  color: rgba(0, 0, 0, 0.3);
+  background-color: #e6e6e6;
 }
