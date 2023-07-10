@@ -79,12 +79,14 @@ body {
 
 .btn-brown:focus-visible{
   background-color: #615048;
+  outline: 3px solid #35aeff;
 }
 
 @supports not selector(:focus-visible) {
   .btn-brown:focus {
     /* Fallback for browsers without :focus-visible support */
     background-color: #615048;
+    outline: 3px solid #35aeff;
   }
 }
 
@@ -104,12 +106,14 @@ body {
 
 .btn-blue:focus-visible{
   background-color: #68a2ca;
+  outline: 3px solid #35aeff;
 }
 
 @supports not selector(:focus-visible){
   .btn-blue:focus {
     /* Fallback for browsers without :focus-visible support */
     background-color: #68a2ca;
+    outline: 3px solid #35aeff;
   }
 }
 
@@ -129,12 +133,14 @@ body {
 
 .btn-selected-green:focus-visible{
   background-color: #6c9e42;
+  outline: 3px solid #35aeff;
 }
 
 @supports not selector(:focus-visible){
   .btn-selected-green:focus {
     /* Fallback for browsers without :focus-visible support */
     background-color: #6c9e42;
+    outline: 3px solid #35aeff;
   }
 }
 
@@ -161,7 +167,11 @@ body {
   position: absolute;
   top: 0;
   left: 0;
-  transition: 0.3s;
+  transition: transform 0.3s;
+}
+
+.navigation-logo img{
+  display: block;
 }
 
 .navigation-logo:hover{
@@ -191,7 +201,7 @@ body {
   padding: 20px 16px;
   color: #000000;
   text-decoration: none;
-  transition: 0.3s;
+  transition: color 0.3s, transform 0.3s;
 }
 
 .navigation-link-current::after{
@@ -205,10 +215,27 @@ body {
 }
 
 .navigation-link:not(.navigation-link-current):hover{
-  color: #82b3d3;
+  color: #5a473b;
   transform: translateY(-5px);
 }
 
+.navigation-link:focus-visible,
+.navigation-logo:focus-visible{
+  border-radius: 4px;
+  outline: 3px solid #35aeff;
+}
+
+@supports not selector(:focus-visible){
+  .navigation-link:focus,
+  .navigation-logo:focus{
+    border-radius: 4px;
+    outline: 3px solid #35aeff;
+  }
+}
+
+.navigation-link:active{
+  opacity: 0.5;
+}
 
 .navigation-user{
   max-width: 360px;
@@ -543,6 +570,18 @@ body {
 
 .breadcrumbs-link:hover{
   opacity: 0.6;
+}
+
+.breadcrumbs-link:focus-visible{
+  border-radius: 2px;
+  outline: 3px solid #35aeff;
+}
+
+@supports not selector(:focus-visible){
+  .breadcrumbs-link:focus{
+    border-radius: 2px;
+    outline: 3px solid #35aeff;
+  }
 }
 
 .breadcrumbs-link:active{
@@ -966,12 +1005,31 @@ body {
   color: #000000;
 }
 
+.hotel-card-link:focus-visible{
+  border-radius: 2px;
+  outline: 3px solid #35aeff;
+}
+
+@supports not selector(:focus-visible){
+  .hotel-card-link:focus{
+    border-radius: 2px;
+    outline: 3px solid #35aeff;
+  }
+}
+
 .hotel-card-img{
   display: block;
   object-fit: contain;
   max-width: 100%;
   height: auto;
   margin-bottom: 16px;
+  transition: 0.3s;
+}
+
+.hotel-card-img:hover{
+  transform: scale(0.9);
+  border-radius: 4px;
+  box-shadow: 0 0 0 3px #35aeff;
 }
 
 .hotel-card-title{
@@ -985,7 +1043,8 @@ body {
   text-decoration: underline;
 }
 
-.hotel-card-title:active{
+.hotel-card-title:active,
+.hotel-card-img:active{
   opacity: 0.6;
 }
 
@@ -1126,11 +1185,16 @@ body {
   background-color: #68a2ca;
 }
 
+.pagination-link:not([class$="current"]):focus-visible{
+  outline: 3px solid #35aeff;
+}
+
 
 @supports not selector(:focus-visible) {
   .pagination-link:not([class$="current"]):focus {
     color: #ffffff;
     background-color: #68a2ca;
+    outline: 3px solid #35aeff;
   }
 }
 
@@ -1242,7 +1306,8 @@ body {
 }
 
 .social-item-link:focus-visible{
-  outline: none;
+  border-radius: 4px;
+  outline: 3px solid #35aeff;
 }
 
 @supports not selector(:focus-visible){
@@ -1250,7 +1315,8 @@ body {
     fill: #68a2ca;
   }
   .social-item-link:focus{
-  outline: none;
+    border-radius: 4px;
+    outline: 3px solid #35aeff;
   }
 }
 
@@ -1282,14 +1348,16 @@ body {
 .contacts-phone:focus-visible,
 .contacts-logo-htmlacademy:focus-visible{
   color: #756157;
-  outline: none;
+  border-radius: 4px;
+  outline: 3px solid #35aeff;
 }
 
 @supports not selector(:focus-visible){
   .contacts-phone:focus,
   .contacts-logo-htmlacademy:focus{
     color: #756157;
-    outline: none;
+    border-radius: 4px;
+    outline: 3px solid #35aeff;
   }
 }
 
@@ -1380,8 +1448,8 @@ body {
 }
 
 .date-text{
+  align-self: center;
   max-width: 137px;
-  padding: 12px 0;
   text-transform: capitalize;
 }
 
