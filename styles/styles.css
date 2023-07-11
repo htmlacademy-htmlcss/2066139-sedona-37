@@ -39,6 +39,7 @@ body {
   padding: 0;
   border: 0;
   white-space: nowrap;
+  -webkit-clip-path: inset(100%);
   clip-path: inset(100%);
   clip: rect(0 0 0 0);
   overflow: hidden;
@@ -668,6 +669,7 @@ body {
   margin-right: 16px;
   border-radius: 4px;
   background-color: #ffffff;
+  -webkit-appearance: none;
   appearance: none;
   cursor: pointer;
 }
@@ -738,7 +740,6 @@ body {
   font-weight: 700;
   background-color: #f2f2f2;
   border: none;
-  appearance: none;
 }
 
 /* remove the arrows from the input */
@@ -750,8 +751,9 @@ body {
 .field-number,
 .field-number:hover,
 .field-number:focus{
-  appearance: none;
+  -webkit-appearance: none;
   -moz-appearance: textfield;
+  appearance: none;
 }
 
 .price-range-field:hover:not(:disabled){
