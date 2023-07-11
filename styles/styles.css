@@ -754,7 +754,7 @@ body {
   -moz-appearance: textfield;
 }
 
-.price-range-field:hover{
+.price-range-field:hover:not(:disabled){
   background-color: #e6e6e6;
 }
 
@@ -765,6 +765,10 @@ body {
 
 .price-range-field:not(:placeholder-shown):hover{
   box-shadow: 0 0 0 2px #000000
+}
+
+.price-range-field:disabled{
+  opacity: 0.4;
 }
 
 .price-range-label span{
@@ -808,7 +812,7 @@ body {
   right: 0;
 }
 
-.range-btn:hover{
+.range-btn:hover:not(:disabled){
   box-shadow: 0 4px 10px 0 rgba(0, 0, 0, 0.25);
 }
 
@@ -820,6 +824,10 @@ body {
 .range-btn:active{
   outline: 2px solid #83b3d3;
   box-shadow: 0 7px 15px 0 rgba(0, 0, 0, 0.40);
+}
+
+.range-btn:disabled{
+  opacity: 0.4;
 }
 
 .btn-filter-wrapper{
@@ -1259,7 +1267,7 @@ body {
   transition: background-color 0.3s;
 }
 
-.field-subscribe:hover{
+.field-subscribe:hover:not(:disabled){
   background-color: #e6e6e6;
 }
 
@@ -1271,6 +1279,10 @@ body {
 
 .field-subscribe:not(:placeholder-shown){
   font-weight: 700;
+}
+
+.field-subscribe:disabled{
+  opacity: 0.6;
 }
 
 .newsletter-btn{
@@ -1478,6 +1490,10 @@ body {
   background-color: #f2f2f2;
 }
 
+.input-box:disabled{
+  opacity: 0.5;
+}
+
 .field-date{
   width: 440px;
   padding: 12px 40px 12px 20px;
@@ -1485,11 +1501,11 @@ body {
   border-radius: 4px;
 }
 
-.field-date:hover{
+.field-date:hover:not(:disabled){
   background-color: #e6e6e6;
 }
 
-.field-date:not(:placeholder-shown):hover{
+.field-date:not(:placeholder-shown):not(:disabled):hover{
   background-color: #f2f2f2;
   outline: 2px solid #000000;
 }
@@ -1666,7 +1682,7 @@ body {
   cursor: pointer;
 }
 
-.hotel-search-btn.btn-blue:active{
+.hotel-search-btn.btn-blue:active:not(:disabled){
   background-color: #68a2ca;
 }
 
