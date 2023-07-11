@@ -1550,7 +1550,6 @@ body {
   border: none;
 }
 
-
 .decrement-count:focus-visible .minus-icon,
 .increment-count:focus-visible .plus-icon{
   color: #000000;
@@ -1610,6 +1609,11 @@ body {
   border-radius: 50%;
   background: #83b3d3 url("../images/icons/tooltip.svg") no-repeat center;
   cursor: pointer;
+  transition: 0.3s;
+}
+
+.tooltip-toggle:hover{
+  background-color: #68a2ca;
 }
 
 .tooltip:hover .tooltip-text,
