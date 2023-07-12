@@ -19,6 +19,7 @@ html{
 }
 
 body {
+  min-width: 1280px;
   height: 100%;
   margin: 0;
   font-family: "PT Sans", "Arial", sans-serif;
@@ -38,6 +39,7 @@ body {
   padding: 0;
   border: 0;
   white-space: nowrap;
+  -webkit-clip-path: inset(100%);
   clip-path: inset(100%);
   clip: rect(0 0 0 0);
   overflow: hidden;
@@ -181,7 +183,7 @@ body {
 .navigation-list{
   display: flex;
   flex-wrap: wrap;
-  justify-content: flex-end;
+  align-content: flex-start;
   max-width: 450px;
   margin: 0;
   margin-left: 168px;
@@ -238,6 +240,7 @@ body {
 }
 
 .navigation-user{
+  justify-content: flex-end;
   max-width: 360px;
   margin-left: auto;
 }
@@ -270,6 +273,8 @@ body {
   top: 11px;
   left: 20px;
   display: block;
+  box-sizing: border-box;
+  max-width: 35px;
   padding: 5px;
   padding-left: 4px;
   font-size: 10px;
@@ -277,6 +282,7 @@ body {
   color: #ffffff;
   border-radius: 10px;
   background-color: #7db54f;
+  overflow: hidden;
 }
 
 .navigation-search:hover svg{
@@ -290,6 +296,8 @@ body {
 }
 
 .btn-header-link{
+  box-sizing: border-box;
+  max-width: 165px;
   padding: 8px 34px;
 }
 
@@ -338,12 +346,12 @@ body {
 }
 
 .advantages-title{
-  max-width: 625px;
+  max-width: 640px;
   margin: 0 auto 25px;
 }
 
 .advantages-reason{
-  max-width: 655px;
+  max-width: 680px;
   margin: 0 auto 90px;
 }
 
@@ -355,7 +363,8 @@ body {
   list-style: none;
 }
 
-.advantages-list .title, .services-list .title{
+.advantages-list .title,
+.services-list .title{
   font-size: 24px;
   line-height: 28px;
   text-transform: uppercase;
@@ -537,6 +546,8 @@ body {
 
 .breadcrumbs{
   display: flex;
+  flex-wrap: wrap;
+  row-gap: 10px;
   margin: 0;
   padding: 0;
   list-style: none;
@@ -592,6 +603,7 @@ body {
 .hotels-filter{
   display: flex;
   flex-wrap: wrap;
+  row-gap: 20px;
 }
 
 .hotels-filter fieldset{
@@ -639,6 +651,7 @@ body {
 .control{
   display: flex;
   align-items: center;
+  word-break: break-word;
   cursor: pointer;
 }
 
@@ -652,12 +665,14 @@ body {
 
 .control-input{
   position: relative;
+  flex-shrink: 0;
   width: 20px;
   height: 20px;
   margin: 0;
   margin-right: 16px;
   border-radius: 4px;
   background-color: #ffffff;
+  -webkit-appearance: none;
   appearance: none;
   cursor: pointer;
 }
@@ -728,7 +743,6 @@ body {
   font-weight: 700;
   background-color: #f2f2f2;
   border: none;
-  appearance: none;
 }
 
 /* remove the arrows from the input */
@@ -740,11 +754,12 @@ body {
 .field-number,
 .field-number:hover,
 .field-number:focus{
+  -webkit-appearance: none;
   appearance: none;
   -moz-appearance: textfield;
 }
 
-.price-range-field:hover{
+.price-range-field:hover:not(:disabled){
   background-color: #e6e6e6;
 }
 
@@ -755,6 +770,10 @@ body {
 
 .price-range-field:not(:placeholder-shown):hover{
   box-shadow: 0 0 0 2px #000000
+}
+
+.price-range-field:disabled{
+  opacity: 0.4;
 }
 
 .price-range-label span{
@@ -798,7 +817,7 @@ body {
   right: 0;
 }
 
-.range-btn:hover{
+.range-btn:hover:not(:disabled){
   box-shadow: 0 4px 10px 0 rgba(0, 0, 0, 0.25);
 }
 
@@ -810,6 +829,10 @@ body {
 .range-btn:active{
   outline: 2px solid #83b3d3;
   box-shadow: 0 7px 15px 0 rgba(0, 0, 0, 0.40);
+}
+
+.range-btn:disabled{
+  opacity: 0.4;
 }
 
 .btn-filter-wrapper{
@@ -882,6 +905,7 @@ body {
 
 .select-control{
   min-width: 292px;
+  max-width: 320px;
   margin-right: 70px;
   padding: 12px 20px;
   padding-right: 40px;
@@ -924,6 +948,7 @@ body {
 .view-card-list{
   display: flex;
   flex-wrap: wrap;
+  justify-content: flex-end;
   gap: 8px;
   max-width: 160px;
   margin: 0;
@@ -1203,7 +1228,7 @@ body {
   background-color: #82b3d3;
 }
 
-/* PAGE-FOOTER */
+/* newsletter block*/
 .newsletter{
   padding: 96px 0 104px;
   text-align: center;
@@ -1247,7 +1272,7 @@ body {
   transition: background-color 0.3s;
 }
 
-.field-subscribe:hover{
+.field-subscribe:hover:not(:disabled){
   background-color: #e6e6e6;
 }
 
@@ -1261,7 +1286,18 @@ body {
   font-weight: 700;
 }
 
+.field-subscribe:invalid:not(:placeholder-shown){
+  background-color: #ffe7e7;
+  outline: 3px solid #c9595d;
+  outline-offset: -3px;
+}
+
+.field-subscribe:disabled{
+  opacity: 0.6;
+}
+
 .newsletter-btn{
+  min-width: 232px;
   max-width: 235px;
   padding: 8px 50px;
   font-size: 20px;
@@ -1272,7 +1308,8 @@ body {
   transition: background-color 0.3s;
 }
 
-.contacts{
+/* PAGE-FOOTER */
+.page-footer{
   padding: 40px 70px 30px;
 }
 
@@ -1328,6 +1365,7 @@ body {
   display: flex;
   flex-direction: column;
   row-gap: 15px;
+  max-width: 400px;
 }
 
 .contacts-phone{
@@ -1445,6 +1483,7 @@ body {
   display: flex;
   justify-content: space-between;
   align-items: flex-start;
+  word-break: break-word;
 }
 
 .date-text{
@@ -1463,6 +1502,10 @@ body {
   background-color: #f2f2f2;
 }
 
+.input-box:disabled{
+  opacity: 0.5;
+}
+
 .field-date{
   width: 440px;
   padding: 12px 40px 12px 20px;
@@ -1470,11 +1513,11 @@ body {
   border-radius: 4px;
 }
 
-.field-date:hover{
+.field-date:hover:not(:disabled){
   background-color: #e6e6e6;
 }
 
-.field-date:not(:placeholder-shown):hover{
+.field-date:not(:placeholder-shown):not(:disabled):hover{
   background-color: #f2f2f2;
   outline: 2px solid #000000;
 }
@@ -1500,7 +1543,8 @@ body {
   margin: 0;
 }
 
-.decrement-count, .increment-count{
+.decrement-count,
+.increment-count{
   display: flex;
   justify-content: center;
   align-items: center;
@@ -1534,7 +1578,6 @@ body {
   border: none;
 }
 
-
 .decrement-count:focus-visible .minus-icon,
 .increment-count:focus-visible .plus-icon{
   color: #000000;
@@ -1556,7 +1599,8 @@ body {
   color: rgba(0, 0, 0, 0.2);
 }
 
-.person-adults, .person-children{
+.person-adults,
+.person-children{
   width: 31px;
   text-align: center;
   line-height: 20px;
@@ -1565,6 +1609,8 @@ body {
 .form-label-icon{
   position: relative;
   justify-self: flex-end;
+  box-sizing: border-box;
+  max-width: 150px;
   padding: 11px 0;
   padding-right: 83px;
 }
@@ -1591,6 +1637,11 @@ body {
   border-radius: 50%;
   background: #83b3d3 url("../images/icons/tooltip.svg") no-repeat center;
   cursor: pointer;
+  transition: 0.3s;
+}
+
+.tooltip-toggle:hover{
+  background-color: #68a2ca;
 }
 
 .tooltip:hover .tooltip-text,
@@ -1643,7 +1694,7 @@ body {
   cursor: pointer;
 }
 
-.hotel-search-btn.btn-blue:active{
+.hotel-search-btn.btn-blue:active:not(:disabled){
   background-color: #68a2ca;
 }
 
