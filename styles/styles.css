@@ -1228,7 +1228,7 @@ body {
   background-color: #82b3d3;
 }
 
-/* PAGE-FOOTER */
+/* newsletter block*/
 .newsletter{
   padding: 96px 0 104px;
   text-align: center;
@@ -1302,7 +1302,8 @@ body {
   transition: background-color 0.3s;
 }
 
-.contacts{
+/* PAGE-FOOTER */
+.page-footer{
   padding: 40px 70px 30px;
 }
 
