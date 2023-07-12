@@ -273,6 +273,8 @@ body {
   top: 11px;
   left: 20px;
   display: block;
+  box-sizing: border-box;
+  max-width: 35px;
   padding: 5px;
   padding-left: 4px;
   font-size: 10px;
@@ -280,6 +282,7 @@ body {
   color: #ffffff;
   border-radius: 10px;
   background-color: #7db54f;
+  overflow: hidden;
 }
 
 .navigation-search:hover svg{
@@ -343,12 +346,12 @@ body {
 }
 
 .advantages-title{
-  max-width: 625px;
+  max-width: 640px;
   margin: 0 auto 25px;
 }
 
 .advantages-reason{
-  max-width: 655px;
+  max-width: 680px;
   margin: 0 auto 90px;
 }
 
