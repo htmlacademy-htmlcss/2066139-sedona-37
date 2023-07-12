@@ -755,8 +755,8 @@ body {
 .field-number:hover,
 .field-number:focus{
   -webkit-appearance: none;
-  -moz-appearance: textfield;
   appearance: none;
+  -moz-appearance: textfield;
 }
 
 .price-range-field:hover:not(:disabled){
@@ -1284,6 +1284,12 @@ body {
 
 .field-subscribe:not(:placeholder-shown){
   font-weight: 700;
+}
+
+.field-subscribe:invalid:not(:placeholder-shown){
+  background-color: #ffe7e7;
+  outline: 3px solid #c9595d;
+  outline-offset: -3px;
 }
 
 .field-subscribe:disabled{
